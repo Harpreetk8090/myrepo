@@ -1,0 +1,31 @@
+<p>myproduct works!</p>
+<input type="text" placeholder="enter the text" [(ngModel)]="searchdata" >
+<table>
+    <tr>
+        <th>ID</th>
+        <th>TITLE</th>
+        <th>BODY</th>
+        <th>USERID</th>
+    </tr>
+    
+    <tr *ngFor="let item of mydata | filterdata: searchdata">
+        <td>{{item.id}}</td>
+        <td>{{item.title}}</td>
+        <td>{{item.body}}</td>
+        <td>{{item.userId}}</td>
+    </tr>
+
+</table>
+<!-- <mat-grid-list cols="4"  gutterSize="10px" >
+<div *ngFor="let item of mydata">
+<mat-grid-tile class="mycontainer"  >
+<mat-card class="example-card">
+    <mat-card-title>{{item.title}} </mat-card-title>
+     <mat-card-content>
+       {{item.body}}
+      </mat-card-content>
+    
+  </mat-card>
+</mat-grid-tile>
+</div>
+</mat-grid-list> -->
